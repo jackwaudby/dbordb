@@ -5,9 +5,9 @@ Initially there will be a focus on distributed databases.
 
 | Name                                                               | Concurrency Control  | Replication      | 2PC   | Type                  |
 | -----------                                                        | :------------------: | :--------------: | ----- | ----------            |
-| Sinfonia                                                           | OCC                  | Primary-Backup   | ✅    | Layered               |
-| Percolator                                                         | OCC                  | Primary-Backup   |       | Layered               |
-| Spanner                                                            | 2PL + wound/wait     | Multi-Paxos      |       | Layered               |
+| [Sinfonia](https://github.com/jackwaudby/dbordb/blob/main/sinfonia.md)                                                          | OCC                  | Primary-Backup   | ✅    | Layered               |]
+| [Percolator](https://github.com/jackwaudby/dbordb/blob/main/percolator.md)                                                         | OCC                  | Primary-Backup   |       | Layered               |
+| [Spanner](https://github.com/jackwaudby/dbordb/blob/main/spanner.md)                                                           | 2PL + wound/wait     | Multi-Paxos      |       | Layered               |
 | [CLOCC](https://github.com/jackwaudby/dbordb/blob/main/clocc.md)   | OCC                  | VSR              |       | Layered               |
 | Granola                                                            |                      | VSR              | ✅    | Layered               |
 | [Calvin](https://github.com/jackwaudby/dbordb/blob/main/calvin.md) | 2PL                  | Paxos            | ❌    | Layered/Deterministic |
