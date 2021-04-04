@@ -21,6 +21,7 @@
 ### Transaction Types
 
 ### Consistency Guarantees
+Parallel SI
 
 ### Clocks
 
