@@ -19,8 +19,10 @@
 ### Workloads
 
 ### Transaction Types
+Read-only
 
 ### Consistency Guarantees
+Causal
 
 ### Clocks
 
