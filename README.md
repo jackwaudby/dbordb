@@ -28,7 +28,7 @@ Initially there will be a focus on distributed databases.
 | [SLOG](https://github.com/jackwaudby/dbordb/blob/main/slog.md)                                                                |                      |                  |       |                       |
 | [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/oceanvista.md)                                                          |                      |                  |       | Unified               |
 
-Concurreny Control:
+Concurrency Control:
 + OCC
 + 2PL
 + TO
@@ -36,15 +36,15 @@ Concurreny Control:
 + Mixed
 
 Replication:
-+ VSR: Viewstamped Replication
++ Viewstamped Replication (VSR)
 + Paxos
 + Raft
 
 Type:
 + Layered: roll together protocols, e.g., 2PL + 2PL + Paxos.
-+ Unified: combine concurrency control, replication, and commitment protocols.
-+ Eventual: catch-all for systems that do not offer convential transactions.
-+ Causal
++ Unified: combine concurrency control, replication, and commitment protocols into a single protocol.
++ Eventual: evenutal consistency.
++ Causal: causal consistency.
 
 Other dimensions:
 + workload contention
