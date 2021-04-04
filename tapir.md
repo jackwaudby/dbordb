@@ -17,6 +17,7 @@
 ### Atomic Commitment
 
 ### Workloads
+Low contention
 
 ### Transaction Types
 
