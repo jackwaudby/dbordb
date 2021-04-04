@@ -6,7 +6,7 @@ Initially there will be a focus on distributed databases.
 + Sinfonia 
 + Percolator 
 + Spanner 
-+ CLOCC
++ [CLOCC](https://github.com/jackwaudby/dbordb/blob/main/clocc.md)
 + Granola
 + [Calvin](https://github.com/jackwaudby/dbordb/blob/main/calvin.md)
 + Salt
