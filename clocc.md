@@ -17,5 +17,8 @@ Fine-grained OCC
 ### Replication 
 Viewstamped replication
 
+### Clocks
+Loosely synchronised
+
 ### Links
 
