@@ -27,6 +27,8 @@ Initially there will be a focus on distributed databases.
 | [Lynx](https://github.com/jackwaudby/dbordb/blob/main/lynx.md)                                                                |                      |                  |       |                       |
 | [SLOG](https://github.com/jackwaudby/dbordb/blob/main/slog.md)                                                                |                      |                  |       |                       |
 | [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/oceanvista.md)                                                          |                      |                  |       | Unified               |
+| Tango |||||
+| Corfu |||||
 
 Concurrency Control:
 + OCC
