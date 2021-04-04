@@ -15,7 +15,7 @@ Initially there will be a focus on distributed databases.
 + Rococo
 + MDCC
 + TAPIR
-+ Janus
++ [Janus](https://github.com/jackwaudby/dbordb/blob/main/janus.md)
 + PNUTS
 + Dynamo 
 + TAO
