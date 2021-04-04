@@ -21,6 +21,7 @@
 ### Transaction Types
 
 ### Consistency Guarantees
+Strict Serializability
 
 ### Clocks
 
