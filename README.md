@@ -5,12 +5,12 @@ Initially there will be a focus on distributed databases.
 
 | Name        | Concurrency Control | Replication    | 2PC | Type     | Clocks     |
 | ----------- | :------------------:|:--------------:|-----|----------|----------- |
-| Sinfonia    | OCC                 | Primary-Backup |  ✅  | Layered  | ?|
-| Percolator  | OCC                 | Primary-Backup | ?   | Layered  | ? |
-| Spanner     | 2PL + wound/wait    | Multi-Paxos    | ?   | Layered  | Atomic |
-| [CLOCC](https://github.com/jackwaudby/dbordb/blob/main/clocc.md) | OCC|VSR| ? |Layered  | ? |
-| Granola | ? | VSR |✅ |Layered  | ? |
-| [Calvin](https://github.com/jackwaudby/dbordb/blob/main/calvin.md) | 2PL | Paxos | ❌ |Layered/Deterministic| ? |
+| Sinfonia    | OCC                 | Primary-Backup |  ✅  | Layered  | |
+| Percolator  | OCC                 | Primary-Backup |    | Layered  |  |
+| Spanner     | 2PL + wound/wait    | Multi-Paxos    |    | Layered  | Atomic |
+| [CLOCC](https://github.com/jackwaudby/dbordb/blob/main/clocc.md) | OCC|VSR|  |Layered  |  |
+| Granola |  | VSR |✅ |Layered  |  |
+| [Calvin](https://github.com/jackwaudby/dbordb/blob/main/calvin.md) | 2PL | Paxos | ❌ |Layered/Deterministic|  |
 | Salt |Mixed|||Layered||
 | Callas | Mixed|||Layered||
 | Replicated Commit ||Paxos||Layered||
@@ -28,6 +28,18 @@ Initially there will be a focus on distributed databases.
 | SLOG ||||||
 | OceanVista ||||Unified||
 
+Concurreny Control: 
++ OCC
++ 2PL
++ TO
++ Graph
++ Mixed
+
+Replication:
++ VSR: Viewstamped Replication
++ Paxos
++ Raft
+
 Type:
 + Layered: roll together protocols, e.g., 2PL + 2PL + Paxos. 
 + Unified: combine concurrency control, replication, and commitment protocols.
@@ -35,9 +47,12 @@ Type:
 + Causal
 
 Other dimensions:
-+ specific workload 
++ workload contention
 + data model
 + transaction types, e.g., one-shot
++ partial vs full replication
++ transactional isolation level/replicated data consistency 
+
  
- VSR: Viewstamped Replication
+
 
