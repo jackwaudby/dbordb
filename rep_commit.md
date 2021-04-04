@@ -9,6 +9,7 @@
 **Paper:**
 
 ### Idea
+Paxos over 2PC.
 
 ### Concurrency Control
 
