@@ -23,5 +23,6 @@
 ### Consistency Guarantees
 
 ### Clocks
+Atomic clocks.
 
 ### Links
