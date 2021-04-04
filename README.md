@@ -1,6 +1,6 @@
 # Database of Research Databases
 
-Taking motivation from the excellent [Database of Databases (DoD)](https://dbdb.io/) the goal here is to catalog **research protoype database systems**, highlighting their "novel" features and design principles.
+Taking motivation from the excellent [Database of Databases](https://dbdb.io/) the goal here is to catalog **research protoype database systems**, highlighting their "novel" features and design principles.
 Initially there will be a focus on distributed databases. 
 
 + Sinfonia 
