@@ -9,6 +9,7 @@
 **Paper:**
 
 ### Idea
+Optimised for single-shard transactions.
 
 ### Concurrency Control
 
