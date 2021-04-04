@@ -9,24 +9,24 @@ Initially there will be a focus on distributed databases.
 | [Percolator](https://github.com/jackwaudby/dbordb/blob/main/percolator.md)                                                         | OCC                  | Primary-Backup   |       | Layered               |
 | [Spanner](https://github.com/jackwaudby/dbordb/blob/main/spanner.md)                                                           | 2PL + wound/wait     | Multi-Paxos      |       | Layered               |
 | [CLOCC](https://github.com/jackwaudby/dbordb/blob/main/clocc.md)   | OCC                  | VSR              |       | Layered               |
-| Granola                                                            |                      | VSR              | ✅    | Layered               |
+| [Granola](https://github.com/jackwaudby/dbordb/blob/main/granola.md)                                                       |                      | VSR              | ✅    | Layered               |
 | [Calvin](https://github.com/jackwaudby/dbordb/blob/main/calvin.md) | 2PL                  | Paxos            | ❌    | Layered/Deterministic |
-| Salt                                                               | Mixed                |                  |       | Layered               |
-| Callas                                                             | Mixed                |                  |       | Layered               |
-| Replicated Commit                                                  |                      | Paxos            |       | Layered               |
-| Rococo                                                             | Graph                | Paxos            |       | Layered               |
-| MDCC                                                               |                      |                  |       | Unified               |
-| TAPIR                                                              |                      |                  |       | Unified               |
+| [Salt](https://github.com/jackwaudby/dbordb/blob/main/salt.md)                                                             | Mixed                |                  |       | Layered               |
+| [Callas](https://github.com/jackwaudby/dbordb/blob/main/callas.md)                                                               | Mixed                |                  |       | Layered               |
+| [Replicated Commit](https://github.com/jackwaudby/dbordb/blob/main/rep_commit.md)                                                    |                      | Paxos            |       | Layered               |
+| [Rococo](https://github.com/jackwaudby/dbordb/blob/main/rococo.md)                                                               | Graph                | Paxos            |       | Layered               |
+| [MDCC](https://github.com/jackwaudby/dbordb/blob/main/mdcc.md)                                                                 |                      |                  |       | Unified               |
+| [TAPIR](https://github.com/jackwaudby/dbordb/blob/main/tapir.md)                                                                |                      |                  |       | Unified               |
 | [Janus](https://github.com/jackwaudby/dbordb/blob/main/janus.md)   |                      |                  |       | Unified               |
-| PNUTS                                                              |                      |                  |       | Eventual              |
-| Dynamo                                                             |                      |                  |       | Eventual              |
-| TAO                                                                |                      |                  |       | Eventual              |
-| COPS                                                               |                      |                  |       | Causal                |
-| Eiger                                                              |                      |                  |       | Causal                |
-| Walter                                                             |                      |                  |       |                       |
-| Lynx                                                               |                      |                  |       |                       |
-| SLOG                                                               |                      |                  |       |                       |
-| OceanVista                                                         |                      |                  |       | Unified               |
+| [PNUTS](https://github.com/jackwaudby/dbordb/blob/main/pnuts.md)                                                              |                      |                  |       | Eventual              |
+| [Dynamo](https://github.com/jackwaudby/dbordb/blob/main/dynamo.md)                                                              |                      |                  |       | Eventual              |
+| [TAO](https://github.com/jackwaudby/dbordb/blob/main/tao.md)                                                                 |                      |                  |       | Eventual              |
+| [COPS](https://github.com/jackwaudby/dbordb/blob/main/cops.md)                                                               |                      |                  |       | Causal                |
+| [Eiger](https://github.com/jackwaudby/dbordb/blob/main/eiger.md)                                                               |                      |                  |       | Causal                |
+| [Walter](https://github.com/jackwaudby/dbordb/blob/main/walter.md)                                                              |                      |                  |       |                       |
+| [Lynx](https://github.com/jackwaudby/dbordb/blob/main/lynx.md)                                                                |                      |                  |       |                       |
+| [SLOG](https://github.com/jackwaudby/dbordb/blob/main/slog.md)                                                                |                      |                  |       |                       |
+| [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/oceanvista.md)                                                          |                      |                  |       | Unified               |
 
 Concurreny Control:
 + OCC
