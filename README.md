@@ -17,7 +17,7 @@ Initially there will be a focus on distributed databases.
 | [Rococo](https://github.com/jackwaudby/dbordb/blob/main/summaries/rococo.md)                | G               | Pax  || L ||||
 | [MDCC](https://github.com/jackwaudby/dbordb/blob/main/summaries/mdcc.md)                    |                 ||| U |S/RC|||
 | [TAPIR](https://github.com/jackwaudby/dbordb/blob/main/summaries/tapir.md)                  |                 ||| U | SS |||
-| [Janus](https://github.com/jackwaudby/dbordb/blob/main/summaries/janus.md)                  | G               | Q |:x:| U | SS |H|OS|
+| [Janus](https://github.com/jackwaudby/dbordb/blob/main/summaries/janus.md)                  | G               | G |:x:| U | SS |H|OS|
 | [PNUTS](https://github.com/jackwaudby/dbordb/blob/main/summaries/pnuts.md)                  |                 ||| E ||||
 | [Dynamo](https://github.com/jackwaudby/dbordb/blob/main/summaries/dynamo.md)                |                 ||| E ||||
 | [TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/tao.md)                      |                 ||| E ||||
@@ -44,7 +44,7 @@ Replication (Rep):
 + **Pax**: *paxos*.
 + **MPax**: *multi-paxos*.
 + **Raft**: *raft*.
-+ **Q**: *quorum*. 
++ **G**: *graph-based*.
 
 Type:
 + **L**: *layered*, protocols are combined, e.g., 2PL + 2PC + Paxos.
