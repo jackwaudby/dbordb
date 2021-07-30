@@ -17,7 +17,7 @@ Initially there will be a focus on distributed databases.
 | [Rococo](https://github.com/jackwaudby/dbordb/blob/main/summaries/rococo.md)                ||||||||
 | [MDCC](https://github.com/jackwaudby/dbordb/blob/main/summaries/mdcc.md)                    ||||||||
 | [TAPIR](https://github.com/jackwaudby/dbordb/blob/main/summaries/tapir.md)                  ||||||||
-| [Janus](https://github.com/jackwaudby/dbordb/blob/main/summaries/janus.md)                  | G | G |:x:| U | SS | H | OS |
+| [Janus](https://github.com/jackwaudby/dbordb/blob/main/summaries/janus.md)                  | G | WA |:x:| U | SS | H | OS |
 | [PNUTS](https://github.com/jackwaudby/dbordb/blob/main/summaries/pnuts.md)                  ||||||||
 | [Dynamo](https://github.com/jackwaudby/dbordb/blob/main/summaries/dynamo.md)                ||||||||
 | [TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/tao.md)                      ||||||||
@@ -26,7 +26,7 @@ Initially there will be a focus on distributed databases.
 | [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                ||||||||
 | [Lynx](https://github.com/jackwaudby/dbordb/blob/main/summaries/lynx.md)                    ||||||||
 | [SLOG](https://github.com/jackwaudby/dbordb/blob/main/summaries/slog.md)                    ||||||||
-| [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/summaries/oceanvista.md)        | ACC | WQ/WA |:x:| U | SS | L/H | F |
+| [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/summaries/oceanvista.md)        | ACC | WQ |:x:| U | SS | L/H | F |
 | Tango ||||||||
 | Corfu ||||||||                                                                                      
 | ANNA  ||||||||
@@ -45,7 +45,8 @@ Replication (Rep):
 + **Pax**: *paxos*.
 + **MPax**: *multi-paxos*.
 + **Raft**: *raft*.
-+ **G**: *graph-based*.
++ **WA**: *write-all*.
++ **WQ**: *write-quorum*.
 
 Type:
 + **L**: *layered*, protocols are combined, e.g., 2PL + 2PC + Paxos.
