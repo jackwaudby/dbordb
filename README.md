@@ -26,7 +26,7 @@ Initially there will be a focus on distributed databases.
 | [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                |                 |||||||
 | [Lynx](https://github.com/jackwaudby/dbordb/blob/main/summaries/lynx.md)                    |                 |||||||
 | [SLOG](https://github.com/jackwaudby/dbordb/blob/main/summaries/slog.md)                    |                 |||||||
-| [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/summaries/oceanvista.md)        |                 ||| U ||||
+| [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/summaries/oceanvista.md)        | ACC             |WQ/WA|:x:| U |SS|L/H|F|
 | Tango ||||||||
 | Corfu ||||||||                                                                                      
 | ANNA  ||||||||
@@ -37,6 +37,7 @@ Concurrency Control (CC):
 + **TO**: *timestamp ordering*.
 + **G**: *graph-based*.
 + **M**: *mixed*, combines multiple protocols.
++ **ACC**: asynchronous concurrency control.
 
 Replication (Rep):
 + **PB**: *primary-backup*.
@@ -63,3 +64,4 @@ Contention (Con):
 
 Transaction Model (TM):
 + **OS**: *one-shot*.
++ **F**: *functors*.
