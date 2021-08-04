@@ -51,6 +51,12 @@ Scaled linearly to over 7 millions operations per second.
 ## Limitations ##
 Read atomic isolation does not prevent concurrent updates, offer recency guarantees, or enforce transitive read dependencies.
 
+## Isolation Level ##
+Read atomic 
+
+## Transaction Model ## 
+General read-write transactions.
+
 ## Links ##
 * [Paper](https://dl.acm.org/doi/10.1145/2909870)
 * [Morning Paper](https://blog.acolyer.org/2015/03/27/scalable-atomic-visibility-with-ramp-transactions/)
