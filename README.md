@@ -1,7 +1,7 @@
 # Database of Research Databases
 
 Taking motivation from the excellent [Database of Databases](https://dbdb.io/) the goal here is to catalog **research protoype database systems**, highlighting their "novel" features and design principles.
-Initially there will be a focus on distributed databases.
+Initially there will be a focus on distributed databases - [here](https://github.com/rystsov/awesome-distributed-transactions) is a collection of distributed transaction materials.
 
 | Name | CC | Rep. | 2PC | Type | Iso. | Con. | TM |
 | :---:| :-:| :--: | :-: | :--: | :--: | :--: |:--:|
