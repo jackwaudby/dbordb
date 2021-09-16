@@ -1,4 +1,4 @@
-# RAMP-TAO: Layering Atomic Transactions on Facebook's Online TAO Data Store #
+# RAMP-TAO: Layering Atomic Transactions on Facebook's Online TAO Data Store [Cheng et al., VLDB 2021]#
 
 ## Motivation ##
 
@@ -79,3 +79,7 @@ In a prototype implementation 99.3% of reads complete in 1 round trip and there 
 ### Limitations ###
 + Read atomic is weaker than snapshot isolation and serializability, offers no point-in time snapshots.
 + Limited recency guarantees.
+
+## Links
++ [Paper](https://www.vldb.org/pvldb/vol14/p3014-cheng.pdf)
++ [Blog post](https://engineering.fb.com/2021/08/18/core-data/ramp-tao/)
