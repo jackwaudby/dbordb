@@ -30,6 +30,11 @@ Replication (Rep):
 + **WQ**: *write-quorum*.
 + **A**: *asynchronus replication*, exact guarantees vary (EC: evenutal consistency).
 
+Two-phase Commit (2PC):
+* :white_check_mark:: yes.
+* :x:: now.
+* **PC**: *parallel commits*.
+
 Type:
 + **L**: *layered*, protocols are combined, e.g., 2PL + 2PC + Paxos.
 + **U**: *unified*, protocols are combined into one.
@@ -47,7 +52,8 @@ Contention (Con):
 + **L**: designed for low contention.
 
 Transaction Model (TM):
-+ **GRW**: *general read-write*, general read-write transactions.
++ **I**: *interactive*, interactive transactions.
++ **RW**: *read-write*, read-write transactions.
 + **RO**: *read-only*, read-only transactions.
 + **WO**: *write-only*, write-only transactions.
 + **OS**: *one-shot*, transactions that can be broken into pieces-per-shard in which no piece is dependent on another.
