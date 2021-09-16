@@ -1,4 +1,4 @@
-# RAMP-TAO: Layering Atomic Transactions on Facebook's Online TAO Data Store [Cheng et al., VLDB 2021]#
+# RAMP-TAO: Layering Atomic Transactions on Facebook's Online TAO Data Store [Cheng et al., VLDB 2021] #
 
 ## Motivation ##
 
