@@ -1,27 +1,25 @@
-## TITLE
+# Title [Authors, Conf, Year] #
 
-**Authors:**
+## Motivation/Idea ##
 
-**Year:**
+## System Model ##
 
-**Conference:**
+## Transaction Model ##
 
-**Paper:**
+## Workload ##
 
-### Idea
+## Isolation and Consistency Guarantees ##
 
-### Concurrency Control
+## Sketch Algorithm ##
 
-### Replication
+### Clocks ###
 
-### Atomic Commitment
+### Concurrency Control ###
 
-### Workloads
+### Replication ###
 
-### Transaction Types
+### Atomic Commitment ###
 
-### Consistency Guarantees
+## Results and Limitations ##
 
-### Clocks
-
-### Links
+## Links ##
