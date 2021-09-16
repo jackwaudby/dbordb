@@ -9,7 +9,7 @@ Initially there will be a focus on distributed databases - [here](https://github
 | [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/summaries/oceanvista.md)        | ACC | WQ |:x:| U | SS | L/H | F |
 | [RAMP](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp.md)            |RAMP/*|:x:|:white_check_mark:|L|RA|L/H|GRW|
 | [RAMP-TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp_tao.md)            |RAMP/F|A/EC|:white_check_mark:|L|RA|H|RO/WO|
-| [CockroachDB](https://github.com/jackwaudby/dbordb/blob/main/summaries/cockroach.md)            ||||||||
+| [CockroachDB](https://github.com/jackwaudby/dbordb/blob/main/summaries/cockroach.md)            |OCC|Raft|PC|L|S|-|I|
 
 Concurrency Control (CC):
 + **OCC**: *optimistic concurrency control*.
@@ -30,9 +30,9 @@ Replication (Rep):
 + **WQ**: *write-quorum*.
 + **A**: *asynchronus replication*, exact guarantees vary (EC: evenutal consistency).
 
-Two-phase Commit (2PC):
-* :white_check_mark:: yes.
-* :x:: now.
+Two-Phase Commit (2PC):
+* :white_check_mark:: *yes*.
+* :x:: *no*.
 * **PC**: *parallel commits*.
 
 Type:
@@ -58,3 +58,7 @@ Transaction Model (TM):
 + **WO**: *write-only*, write-only transactions.
 + **OS**: *one-shot*, transactions that can be broken into pieces-per-shard in which no piece is dependent on another.
 + **F**: *functors*, transactions capable of executing fully from any server in the database.
+
+TODO:
+* Distinguish between single versioned vs multi-versioned systems. 
+
