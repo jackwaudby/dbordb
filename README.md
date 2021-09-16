@@ -9,29 +9,7 @@ Initially there will be a focus on distributed databases.
 | [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/summaries/oceanvista.md)        | ACC | WQ |:x:| U | SS | L/H | F |
 | [RAMP](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp.md)            |RAMP/*|:x:|:white_check_mark:|L|RA|L/H|GRW|
 | [RAMP-TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp_tao.md)            |RAMP/F|A/EC|:white_check_mark:|L|RA|H|RO/WO|
-| [Sinfonia](https://github.com/jackwaudby/dbordb/blob/main/summaries/sinfonia.md)            ||||||||
-| [Percolator](https://github.com/jackwaudby/dbordb/blob/main/summaries/percolator.md)        ||||||||       
-| [Spanner](https://github.com/jackwaudby/dbordb/blob/main/summaries/spanner.md)              ||||||||       
-| [CLOCC](https://github.com/jackwaudby/dbordb/blob/main/summaries/clocc.md)                  ||||||||      
-| [Granola](https://github.com/jackwaudby/dbordb/blob/main/summaries/granola.md)              ||||||||
-| [Calvin](https://github.com/jackwaudby/dbordb/blob/main/summaries/calvin.md)                ||||||||     
-| [Salt](https://github.com/jackwaudby/dbordb/blob/main/summaries/salt.md)                    ||||||||
-| [Callas](https://github.com/jackwaudby/dbordb/blob/main/summaries/callas.md)                ||||||||       
-| [Replicated Commit](https://github.com/jackwaudby/dbordb/blob/main/summaries/rep_commit.md) ||||||||
-| [Rococo](https://github.com/jackwaudby/dbordb/blob/main/summaries/rococo.md)                ||||||||
-| [MDCC](https://github.com/jackwaudby/dbordb/blob/main/summaries/mdcc.md)                    ||||||||
-| [TAPIR](https://github.com/jackwaudby/dbordb/blob/main/summaries/tapir.md)                  ||||||||
-| [PNUTS](https://github.com/jackwaudby/dbordb/blob/main/summaries/pnuts.md)                  ||||||||
-| [Dynamo](https://github.com/jackwaudby/dbordb/blob/main/summaries/dynamo.md)                ||||||||
-| [TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/tao.md)                      ||||||||
-| [COPS](https://github.com/jackwaudby/dbordb/blob/main/summaries/cops.md)                    ||||||||
-| [Eiger](https://github.com/jackwaudby/dbordb/blob/main/summaries/eiger.md)                  ||||||||
-| [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                ||||||||
-| [Lynx](https://github.com/jackwaudby/dbordb/blob/main/summaries/lynx.md)                    ||||||||
-| [SLOG](https://github.com/jackwaudby/dbordb/blob/main/summaries/slog.md)                    ||||||||
-| Tango ||||||||
-| Corfu ||||||||                                                                                      
-| ANNA  ||||||||
+| [CockroachDB](https://github.com/jackwaudby/dbordb/blob/main/summaries/cockroach.md)            ||||||||
 
 Concurrency Control (CC):
 + **OCC**: *optimistic concurrency control*.
