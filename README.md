@@ -8,6 +8,7 @@ Initially there will be a focus on distributed databases.
 | [Janus](https://github.com/jackwaudby/dbordb/blob/main/summaries/janus.md)                  | G | WA |:x:| U | SS | H | OS |
 | [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/summaries/oceanvista.md)        | ACC | WQ |:x:| U | SS | L/H | F |
 | [RAMP](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp.md)            |RAMP|:x:|:white_check_mark:|L|RA|L/H|GRW|
+| [RAMP-TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp_tao.md)            |RAMP|A/EC|:white_check_mark:|L|RA|H|RO/WO|
 | [Sinfonia](https://github.com/jackwaudby/dbordb/blob/main/summaries/sinfonia.md)            ||||||||
 | [Percolator](https://github.com/jackwaudby/dbordb/blob/main/summaries/percolator.md)        ||||||||       
 | [Spanner](https://github.com/jackwaudby/dbordb/blob/main/summaries/spanner.md)              ||||||||       
@@ -49,6 +50,7 @@ Replication (Rep):
 + **Raft**: *raft*.
 + **WA**: *write-all*.
 + **WQ**: *write-quorum*.
++ **A**: *asynchronus replication*, exact guarantees vary (EC: evenutal consistency).
 
 Type:
 + **L**: *layered*, protocols are combined, e.g., 2PL + 2PC + Paxos.
@@ -68,5 +70,7 @@ Contention (Con):
 
 Transaction Model (TM):
 + **GRW**: *general read-write*, general read-write transactions.
++ **RO**: *read-only*, read-only transactions.
++ **WO**: *write-only*, write-only transactions.
 + **OS**: *one-shot*, transactions that can be broken into pieces-per-shard in which no piece is dependent on another.
 + **F**: *functors*, transactions capable of executing fully from any server in the database.
