@@ -65,6 +65,7 @@ if WS(Ti) and WS(Tj) overlap and SNAPSHOT(Ti) < COMMIT(Tj) < COMMIT(Ti) then abo
 * No implementation, only analytic model.
 * Don't consider hotspots, or meaningfully vary the workload.
 * Doesn't consider multi-partition transactions.
+* 8 is a higher replication factor.
 
 ## Links ##
 - [Paper](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.84.4364&rep=rep1&type=pdf)
