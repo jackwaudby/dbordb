@@ -62,3 +62,4 @@ Transaction Model (TM):
 TODO:
 * Distinguish between single versioned vs multi-versioned systems. 
 * Distinguish between systems providing multi-partition transactions and those that don't.
+* Distinguish between asynchrous and sychronous replication.
