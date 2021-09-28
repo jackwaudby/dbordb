@@ -53,6 +53,7 @@ Isolation Level (Iso):
 + **RAMP**: *read atomic*.
 + **RC**: *read committed*.
 + **GSI**: *generalisable snapshot isolation*, also referred to as weak-SI and ANSI-SI.
++ **PC-SI**: *prefix consistent snapshot isolation*, also referred to as strong session SI.
 
 Contention (Con): 
 + **H**: designed for high contention.
