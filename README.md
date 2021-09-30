@@ -11,7 +11,7 @@ Initially there will be a focus on distributed databases - [here](https://github
 | [RAMP-TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp_tao.md)            |RAMP/F|A/EC  |2PC |L|RA |H  |RO/WO|:white_check_mark:|
 | [CockroachDB](https://github.com/jackwaudby/dbordb/blob/main/summaries/cockroach.md)        |OCC   |S/Raft|PC  |L|S  |-  |I    |:white_check_mark:|
 | [GSI](https://github.com/jackwaudby/dbordb/blob/main/summaries/gsi.md)                      |MVSB   |A/EC  |AB  |L|G/PC-SI|-  |I    |:x:|
-| [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                |MVSB   |A/EC  |2PC  |L|PSI|-  |I    |:x:|
+| [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                |MVSB   |A/EC  |2PC  |L|PSI|-  |I/PS    |:x:|
 
 
 Concurrency Control:
@@ -69,6 +69,8 @@ Transaction Model (TM):
 + **WO**: *write-only*, write-only transactions.
 + **OS**: *one-shot*, transactions that can be broken into pieces-per-shard in which no piece is dependent on another.
 + **F**: *functors*, transactions capable of executing fully from any server in the database.
++ **PS**: *preferred sites*, transactions operating on only locally preferred site data can commit without remote commuication.
+
 
 TODO:
 * Distinguish between single versioned vs multi-versioned systems. 
