@@ -8,13 +8,13 @@ However, reading from stale snapshots increases the chance of write-write confli
 
 ## System Model/Architecture ##
 Assumes a multi-versioned system where a snapshot refers to a committed state of the database.
-Database goes through a monotonically increasing version history, versions are used to approximate global time. **[Clocks]**
-System consists of a set of *sites* each containing a full copy of the data (fully replicated).  **[Replication]**
+Database goes through a monotonically increasing version history, versions are used to approximate global time **[Clocks]**.
+System consists of a set of *sites* each containing a full copy of the data (fully replicated)  **[Replication]**.
 A transaction executes at a single site, but commitment requires remote communication and upon commit transaction's write sets are applied at other replicas.
 
 They consider 2 architectures:
 * Centralized certifier: 1 site is designated as master, transactions may execute remotely but are forwarded to the master for validation.
-* Distributed certifier: replicas validate locally and gather agreement from other replicas using an atomic broadcast protocol. **[Atomic Commitment]**
+* Distributed certifier: replicas validate locally and gather agreement from other replicas using an atomic broadcast protocol **[Atomic Commitment]**.
 Both certify a transaction using the algorithm below.
 
 ## Transaction Model ##
@@ -58,13 +58,14 @@ if WS(Ti) and WS(Tj) overlap and SNAPSHOT(Ti) < COMMIT(Tj) < COMMIT(Ti) then abo
 ## Results ##
 * Abort rate is a linear function of transaction length and snapshot freshness.
 * In a single site deployment, GSI has a higher abort rate than CSI.
-* In a replicated deployment, PC-SI has a higher abort rate than CSI, but lower latency of update (50%) and read-only (80%) transactions. However, as RTT increases CSI aborts more than PC-SI and much higher latency. The caveat being observing stale snapshots. Overall, if the workload is read-dominant PC-SI is a better choice.
+* In a replicated deployment, PC-SI has a higher abort rate than CSI, but lower latency of update (50%) and read-only (80%) transactions. However, as RTT increases CSI aborts more than PC-SI and has much higher latency. The caveat being observing stale snapshots. Overall, if the workload is read-dominant PC-SI is a better choice.
 
 
 ## Limitations ##
 * No implementation, only analytic model.
 * Don't consider hotspots, or meaningfully vary the workload.
-* Doesn't permit multi-partition transactions.
+* Doesn't consider multi-partition transactions.
+* 8 is a higher replication factor.
 
 ## Links ##
 - [Paper](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.84.4364&rep=rep1&type=pdf)
