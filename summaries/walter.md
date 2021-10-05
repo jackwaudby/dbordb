@@ -105,4 +105,4 @@ Comments:
 + Designing applications to use preferred sites and c-sets could be non-trivial.
 
 ## Links ##
-- (Paper)[http://www.news.cs.nyu.edu/~jinyang/pub/walter-sosp11.pdf]
+- [Paper](http://www.news.cs.nyu.edu/~jinyang/pub/walter-sosp11.pdf)
