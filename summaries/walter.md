@@ -100,9 +100,10 @@ Comments:
 
 ## Limitations ##
 + Not evaluated on a conventional transaction processing workload, e.g., TPC-C.
-+ Transactions cannot span multiple partitions.
-+ Evaluation did not consider mixed workload that containing transactions using the slow and fast commit paths.
++ Transactions cannot span multiple partitions, i.e, it does not support partition independence (see RAMP paper). Whilst data need not be replicated at every site (supports partial replication), if a transaction wants to address data not replicated locally it must first fetch the data from a remote site, it then must commit at all these sites using 2PC. 
++ Evaluation did not consider mixed workload that containing transactions using the slow and fast commit paths, and none of their applications use the slow commit.
 + Designing applications to use preferred sites and c-sets could be non-trivial.
++ Replication/fault-tolerance approach is somewhat "old-school" and can be dangerous in that it can lead to data loss. 
 
 ## Links ##
-- (Paper)[http://www.news.cs.nyu.edu/~jinyang/pub/walter-sosp11.pdf]
+- [Paper](http://www.news.cs.nyu.edu/~jinyang/pub/walter-sosp11.pdf)
