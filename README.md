@@ -10,8 +10,9 @@ Initially there will be a focus on distributed databases - [here](https://github
 | [RAMP](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp.md)                    |RAMP/*|:x:   |2PC |L|RA |L/H|GRW  |:white_check_mark:|
 | [RAMP-TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp_tao.md)            |RAMP/F|A/EC  |2PC |L|RA |H  |RO/WO|:white_check_mark:|
 | [CockroachDB](https://github.com/jackwaudby/dbordb/blob/main/summaries/cockroach.md)        |OCC   |S/Raft|PC  |L|S  |-  |I    |:white_check_mark:|
-| [GSI](https://github.com/jackwaudby/dbordb/blob/main/summaries/gsi.md)                      |MVSB   |A/EC  |AB  |L|G/PC-SI|-  |I    |:x:|
+| [Generalised SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/gsi.md)                      |MVSB   |A/EC  |AB  |L|G/PC-SI|-  |I    |:x:|
 | [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                |MVSB   |A/EC  |2PC  |L|PSI|-  |I/PS    |:x:|
+| [Strong Session SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/ssesssi.md)                |   | |  |||  |    ||
 
 
 Concurrency Control:
