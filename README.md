@@ -5,14 +5,14 @@ Initially there will be a focus on distributed databases - [here](https://github
 
 | Name | Concurrency Control | Replication | Commitment | Type | Isolation | Contention | TM | MPT |
 | :---:| :-:| :--: | :-: | :--: | :--: | :--: |:--:|:--:|
-| [Janus](https://github.com/jackwaudby/dbordb/blob/main/summaries/janus.md)                  | G    |S/WA  |2in1|U|SS |H  | OS  |:white_check_mark:|
-| [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/summaries/oceanvista.md)        | ACC  |S/WQ  |2in1|U|SS |L/H| F   |:white_check_mark:|
-| [RAMP](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp.md)                    |RAMP/*|:x:   |2PC |L|RA |L/H|GRW  |:white_check_mark:|
-| [RAMP-TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp_tao.md)            |RAMP/F|A/EC  |2PC |L|RA |H  |RO/WO|:white_check_mark:|
-| [CockroachDB](https://github.com/jackwaudby/dbordb/blob/main/summaries/cockroach.md)        |OCC   |S/Raft|PC  |L|S  |-  |I    |:white_check_mark:|
-| [Generalised SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/gsi.md)                      |MVSB   |A/EC  |AB  |L|G/PC-SI|-  |I    |:x:|
-| [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                |MVSB   |A/EC  |2PC  |L|PSI|-  |I/PS    |:x:|
-| [Strong Session SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/ssesssi.md)                |   | |  |||  |    ||
+| [Janus](https://github.com/jackwaudby/dbordb/blob/main/summaries/janus.md)                  | G    |S/WA  |2in1|U|SS     |H  |OS   |:white_check_mark:|
+| [OceanVista](https://github.com/jackwaudby/dbordb/blob/main/summaries/oceanvista.md)        | ACC  |S/WQ  |2in1|U|SS     |L/H|F    |:white_check_mark:|
+| [RAMP](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp.md)                    |RAMP/*|:x:   |2PC |L|RA     |L/H|RW   |:white_check_mark:|
+| [RAMP-TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp_tao.md)            |RAMP/F|A/EC  |2PC |L|RA     |H  |RO/WO|:white_check_mark:|
+| [CockroachDB](https://github.com/jackwaudby/dbordb/blob/main/summaries/cockroach.md)        |OCC   |S/Raft|PC  |L|S      |-  |I    |:white_check_mark:|
+| [Generalised SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/gsi.md)           |MVSB  |A/EC  |AB  |L|G/PC-SI|-  |I    |:x:|
+| [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                |MVSB  |A/EC  |2PC |L|PSI    |-  |I/PS |:x:|
+| [Strong Session SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/ssesssi.md)    |MVSB  |A/EC  |:x: |E|G/PC-SI|-  |RO/RW|:x:|
 
 
 Concurrency Control:
@@ -39,8 +39,8 @@ Replication:
   +  **EC**: *eventual consistency*.
 
 Atomic Commitment:
-* *2PC*: *two-phase commit*.
-* *2in1*: *two-in-one*: commitment combined with concurrency control and replication.
+* **2PC**: *two-phase commit*.
+* **2in1**: *two-in-one*: commitment combined with concurrency control and replication.
 * **PC**: *parallel commits*.
 * **AB**: *atomic broadcast*.
 
