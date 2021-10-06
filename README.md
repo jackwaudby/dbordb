@@ -11,8 +11,9 @@ Initially there will be a focus on distributed databases - [here](https://github
 | [RAMP-TAO](https://github.com/jackwaudby/dbordb/blob/main/summaries/ramp_tao.md)            |RAMP/F|A/EC  |2PC |L|RA     |H  |RO/WO|:white_check_mark:|
 | [CockroachDB](https://github.com/jackwaudby/dbordb/blob/main/summaries/cockroach.md)        |OCC   |S/Raft|PC  |L|S      |-  |I    |:white_check_mark:|
 | [Generalised SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/gsi.md)           |MVSB  |A/EC  |AB  |L|G/PC-SI|-  |I    |:x:|
-| [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                |MVSB  |A/EC  |2PC |L|PSI    |-  |I/PS |:x:|
+| [Walter](https://github.com/jackwaudby/dbordb/blob/main/summaries/walter.md)                |MVSB  |A/EC  |2PC |L|P-SI   |-  |I/PS |:x:|
 | [Strong Session SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/ssesssi.md)    |MVSB  |A/EC  |:x: |E|G/PC-SI|-  |RO/RW|:x:|
+| [Clock SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/clocksi.md)             |MVSB  |:x:   |2PC |-|G/C-SI |-  |RO/RW|:white_check_mark:|
 
 
 Concurrency Control:
@@ -55,9 +56,10 @@ Isolation Level (Iso):
 + **SS**: *strict serializabilty*.
 + **RAMP**: *read atomic*.
 + **RC**: *read committed*.
-+ **GSI**: *generalisable snapshot isolation*, also referred to as weak-SI and ANSI-SI.
-+ **PC-SI**: *prefix consistent snapshot isolation*, also referred to as strong session SI.
-+ **PSI**: *parallel snapshot isolation*.
++ **C-SI**: *conventional snapshot isolation*, also referred to as Strong-SI.
++ **G-SI**: *generalisable snapshot isolation*, also referred to as Weak-SI and ANSI-SI.
++ **PC-SI**: *prefix consistent snapshot isolation*, also referred to as Strong Session SI.
++ **P-SI**: *parallel snapshot isolation*.
 
 Contention (Con): 
 + **H**: designed for high contention.
