@@ -1,4 +1,4 @@
-# Clock-SI: Snapshot Isolation for Partitioned Data Stores Using Loosely Synchronized Clocks #
+# Clock-SI: Snapshot Isolation for Partitioned Data Stores Using Loosely Synchronized Clocks [Du et al., SRDS, 2013]#
 
 ## Motivation/Idea ##
 
