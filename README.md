@@ -64,12 +64,12 @@ Isolation Level (Iso):
 + **P-SI**: *parallel snapshot isolation*.
 
 Transaction Model (TM):
-+ **I**: *interactive*, interactive transactions.
++ **I**: *interactive*, interactive transactions allow users to explicitly open and close transactions, allowing user stalls.
 + **RW**: *read-write*, read-write transactions.
 + **RO**: *read-only*, read-only transactions.
 + **WO**: *write-only*, write-only transactions.
 + **OS**: *one-shot*, transactions that can be broken into pieces-per-shard in which no piece is dependent on another.
-+ **TP**: *two-phase*, sequence of read operations (phase 1) followed by a consistency check to determine if the transaction needs to abort, before write operations are executed (phase 2). Strongly two-phase if phase 1 operations produce the same result at all sites.
++ **TP**: *two-phase*, sequence of read operations (phase 1) followed by a consistency check to determine if the transaction needs to abort, before write operations are executed (phase 2). Strongly two-phase (equal to independent transactions) if phase 1 operations produce the same result at all sites.
 + **ST**: *sterile*, two transactions commute if any interleaving of their single-site sub-plans produces the same final database site as any other interleaving. A transaction class (group of transactions) is sterile if it commutes with all transaction classes (including itself).
 + **F**: *functors*, transactions capable of executing fully from any server in the database.
 + **PS**: *preferred sites*, transactions operating on only locally preferred site data can commit without remote commuication.
