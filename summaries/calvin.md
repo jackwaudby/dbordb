@@ -17,7 +17,7 @@ Determinism plays a key role in Calvin, facilitating active replication and simp
 Calvin is a transaction layer above a storage system with a CRUD interface.
 Data is partitioned and replicated across nodes.
 A node has 3 components:
-* **Sequencing layer:** receives transaction inputs, puts them in a global input sequence which it replicates and durably logs via the [replication strategy](#markdown-header-replication).
+* **Sequencing layer:** receives transaction inputs, puts them in a global input sequence which it replicates and durably logs via the [replication strategy](#replication).
 * **Scheduling layer:** deterministic locking to ensure execution order equals global input sequence.
 * **Storage layer**
 
