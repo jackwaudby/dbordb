@@ -20,6 +20,8 @@
 
 ### Atomic Commitment ###
 
-## Results and Limitations ##
+## Results ##
+
+## Limitations ##
 
 ## Links ##
