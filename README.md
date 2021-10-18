@@ -15,7 +15,7 @@ Initially there will be a focus on distributed databases - [here](https://github
 | [Strong Session SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/ssesssi.md)    |MVSB  |A/EC  |:x: |E|G/PC-SI|RO/RW|:x:|
 | [Clock SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/clocksi.md)             |MVSB  |:x:   |2PC |L|G/C-SI |RO/RW|:white_check_mark:|
 | [H-Store](https://github.com/jackwaudby/dbordb/blob/main/summaries/hstore.md)               |OCC   |WA    |2PC*|U|S      |OS/TP/ST|:white_check_mark:|
-
+| [Calvin](https://github.com/jackwaudby/dbordb/blob/main/summaries/calvin.md)               |2PL   |S/WA    |DET|L|SS      |PDT/DT|:white_check_mark:|
 
 Concurrency Control:
 + **OCC**: *optimistic concurrency control*.
@@ -45,13 +45,13 @@ Atomic Commitment:
 * **2in1**: *two-in-one*: commitment combined with concurrency control and replication.
 * **PC**: *parallel commits*.
 * **AB**: *atomic broadcast*.
+* + **DET**: *deterministic*: deterministic.
 
 Type:
 + **L**: *layered*, protocols are combined, e.g., 2PL + 2PC + Paxos.
 + **U**: *unified*, protocols are combined into one.
 + **E**: *eventual*: evenutal consistency.
 + **C**: *causal*: causal consistency.
-+ **D**: *deterministic*: deterministic.
 
 Isolation Level (Iso): 
 + **SS**: *strict serializabilty*.
@@ -74,7 +74,8 @@ Transaction Model (TM):
 + **F**: *functors*, transactions capable of executing fully from any server in the database.
 + **PS**: *preferred sites*, transactions operating on only locally preferred site data can commit without remote commuication.
 + **IT**: *independent transactions*, execute atomically across nodes but do not require agreement as they independently come to the same decision on the transaction's outcome.
-+ **DP**: *dependent transactions*, must perform reads in order to determine their complete read/write sets.
++ **PDT**: *pre-declared transactions*, must pre-declare their read and write sets.
++ **DT**: *dependent transactions*, must perform reads in order to determine their complete read/write sets.
 
 
 TODO:
