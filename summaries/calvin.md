@@ -1,3 +1,5 @@
+⚠ **WIP** ⚠️
+
 # Calvin: Fast Distributed Transactions for Partitioned Database Systems  [Thomson et al., SIGMOD, 2012] #
 
 ## Motivation/Idea ##
@@ -17,13 +19,19 @@ Determinism plays a key role in Calvin, facilitating active replication and simp
 Calvin is a transaction layer above a storage system with a CRUD interface.
 Data is partitioned and replicated across nodes.
 A node has 3 components:
-* **Sequencing layer:** receives transaction inputs, puts them in a global input sequence which it replicates and durably logs via the [replication strategy](#replication).
-* **Scheduling layer:** deterministic locking to ensure execution order equals global input sequence.
+* **Sequencing layer:** receives transaction inputs, puts them in a global input sequence in every [epoch](#clocks) which it replicates and durably logs via the [replication strategy](#replication).
+* **Scheduling layer:** [deterministic locking](#concurrency-control) to ensure execution order equals global input sequence.
 * **Storage layer**
 
-
+The unbundled design means no assumptions about physical data layout can be made.
+This means logging and concurrency control must be logical.
+Logging is straightforward as any replica can rebuild its state from the input logged by the sequencer; checkpointing can be done to improve performance.
+Concurrency control is trickier and requires a deterministic locking protocol.
 
 ## Transaction Model ##
+
+* **Pre-declared Transactions:** must declare their complete item access set up front, read set and write set.
+* **Dependent Transactions:** must perform some reads to determine their full read/write set. Uses Optimistic Lock Location Prediction (OLLP) to support these transactions. Run a recon query to work out the full read and write set, then add to global input sequence, check at runtime is the recon query result is still valid.
 
 ## Workload ##
 
@@ -31,19 +39,35 @@ A node has 3 components:
 
 ## Sketch Algorithm ##
 
+For an epoch, the sequencer at a node:
+* Gathers transaction input requests into a global input sequence (batch).
+* Replicates the global input sequence.
+* After replication sends: (i) sequencer's id, (ii) epoch no., and (iii) all transaction requests to schedulers of each partition within its replica.
+* Schedulers then construct their view of the global input sequence.
+
 ### Clocks ###
 
-Time is broken in epochs of 10ms in which transaction requests get gathered.
+Time is broken in epochs in which transaction requests get gathered.
+The epoch at each node is synchronously incremented every 10ms.
 
 ### Concurrency Control ###
 
-Strict 2PL
+Deterministic Strict 2PL:
+* Acquire all locks for a request
+* Hand to worker thread:
+    * Perform read/write set analysis. Identify local elements and the set of participant nodes in the transaction (read set = passive participant, write set = active participant)
+    * Perform local reads
+    * Forward local reads to all workers on active participant nodes
+    * Collect remote read results
+    * Apply local writes
+
+Ideally, several of these steps happen in parallel.
 
 ### Replication ###
 
-Asynchronous
-
-Synchronous (Paxos-based)
+Nodes are organized into replication groups, i.e., all replicas of a partition.
+* Asynchronous: 1 replica is the master and all requests are forwarded here; complex recovery if master fails.
+* Synchronous (Paxos-based).
 
 ### Atomic Commitment ###
 
