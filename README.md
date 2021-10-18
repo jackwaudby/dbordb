@@ -74,6 +74,7 @@ Transaction Model (TM):
 + **F**: *functors*, transactions capable of executing fully from any server in the database.
 + **PS**: *preferred sites*, transactions operating on only locally preferred site data can commit without remote commuication.
 + **IT**: *independent transactions*, execute atomically across nodes but do not require agreement as they independently come to the same decision on the transaction's outcome.
++ **DP**: *dependent transactions*, must perform reads in order to determine their complete read/write sets.
 
 
 TODO:
