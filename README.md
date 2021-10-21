@@ -16,7 +16,7 @@ Initially there will be a focus on distributed databases - [here](https://github
 | [Clock SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/clocksi.md)             |MVSB  |:x:   |2PC |L|G/C-SI |RO/RW|:white_check_mark:|
 | [H-Store](https://github.com/jackwaudby/dbordb/blob/main/summaries/hstore.md)               |OCC   |WA    |2PC*|U|S      |OS/TP/ST|:white_check_mark:|
 | ⚠️ [Calvin](https://github.com/jackwaudby/dbordb/blob/main/summaries/calvin.md) ⚠️               |2PL   |S/WA  |DET |L|SS     |PDT/DT|:white_check_mark:|
-| ⚠️ [COCO](https://github.com/jackwaudby/dbordb/blob/main/summaries/coco.md) ⚠️                    |OCC   |A/PB  |E2PC|L|S/SI   |PDT/DT|:white_check_mark:|
+| ⚠️ [COCO](https://github.com/jackwaudby/dbordb/blob/main/summaries/coco.md) ⚠️                    |OCC   |A/PB  |E2PC|L|S/SI   |I/RW|:white_check_mark:|
 
 ⚠️ - WIP
 
