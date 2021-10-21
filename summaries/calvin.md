@@ -1,4 +1,4 @@
-⚠ **WIP** ⚠️
+⚠ **WORK IN PROGRESS** ⚠️
 
 # Calvin: Fast Distributed Transactions for Partitioned Database Systems  [Thomson et al., SIGMOD, 2012] #
 
