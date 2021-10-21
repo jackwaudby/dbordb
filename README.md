@@ -15,7 +15,10 @@ Initially there will be a focus on distributed databases - [here](https://github
 | [Strong Session SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/ssesssi.md)    |MVSB  |A/EC  |:x: |E|G/PC-SI|RO/RW|:x:|
 | [Clock SI](https://github.com/jackwaudby/dbordb/blob/main/summaries/clocksi.md)             |MVSB  |:x:   |2PC |L|G/C-SI |RO/RW|:white_check_mark:|
 | [H-Store](https://github.com/jackwaudby/dbordb/blob/main/summaries/hstore.md)               |OCC   |WA    |2PC*|U|S      |OS/TP/ST|:white_check_mark:|
-| [Calvin](https://github.com/jackwaudby/dbordb/blob/main/summaries/calvin.md)               |2PL   |S/WA    |DET|L|SS      |PDT/DT|:white_check_mark:|
+| [Calvin](https://github.com/jackwaudby/dbordb/blob/main/summaries/calvin.md)                |2PL   |S/WA  |DET |L|SS     |PDT/DT|:white_check_mark:|
+| [COCO](https://github.com/jackwaudby/dbordb/blob/main/summaries/coco.md)                    |OCC   |A/PB  |E2PC|L|S/SI   |PDT/DT|:white_check_mark:|
+
+
 
 Concurrency Control:
 + **OCC**: *optimistic concurrency control*.
@@ -29,7 +32,7 @@ Concurrency Control:
 
 
 Replication:
-+ **S**: *Synchronus replication*:
++ **S**: *Synchronous replication*, eager replication:
   + **PB**: *primary-backup*.
   + **VSR**: *viewstamped replication*.
   + **Pax**: *paxos*.
@@ -37,15 +40,16 @@ Replication:
   + **Raft**: *raft*.
   + **WA**: *write-all*, or update everywhere.
   + **WQ**: *write-quorum*.
-+ **A**: *asynchronus replication*:
++ **A**: *asynchronous replication*, lazy replication:
   +  **EC**: *eventual consistency*.
 
 Atomic Commitment:
 * **2PC**: *two-phase commit*, * means sometimes used.
+* **E2PC**: *epoch-based two-phase commit*.
 * **2in1**: *two-in-one*: commitment combined with concurrency control and replication.
 * **PC**: *parallel commits*.
 * **AB**: *atomic broadcast*.
-* + **DET**: *deterministic*: deterministic.
+* **DET**: *deterministic*: deterministic.
 
 Type:
 + **L**: *layered*, protocols are combined, e.g., 2PL + 2PC + Paxos.
